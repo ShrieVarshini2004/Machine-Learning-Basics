@@ -1,1 +1,49 @@
-KNN classification algorithms
+KNN basics:
+1. Dataset Exploration 🔍📊
+Let’s dive into your dataset! The df.head() command gives us a quick look at the first few rows. Each row represents a customer, and the columns capture cool details like region, age, income, and more.
+
+💡 Spotlight on the Target:
+The custcat column is the target variable—aka the customer category. Categories include 1, 2, 3, and 4.
+
+👥 Customer Count by Category:
+
+Category 4: 281 customers
+Category 1: 266 customers
+Others? Slightly fewer, but they’re still important!
+
+2. Income Distribution 💵📈
+🎨 A histogram shows how customer incomes are spread out:
+
+Are incomes bunched together or spread all over?
+Any wild outliers?
+Is it skewed to the left, right, or nicely balanced?
+This visual helps uncover patterns in customer earnings—great for spotting trends! 📊✨
+
+3. Dataset Split Info ✂️📦
+Your data was split into training and test sets, with 80% used for training the model and 20% for testing.
+
+Training data: 800 customers, 11 features.
+Test data: 200 customers, ready to challenge the model!
+
+4. Model Training 🤖📚
+You trained a K-Nearest Neighbors (KNN) classifier! 🏋️‍♀️ The model studied the training data to learn how to categorize customers based on their features. 🎉
+
+5. Predictions 🔮📤
+The model made its predictions on the test data, like:
+Category 1, Category 4, Category 3, and so on. Each number reflects what the model thinks about a specific customer—how cool is that? 😎
+
+6. Accuracy Scores 🎯📊
+📈 Here’s how the model performed:
+
+Training Accuracy: 54.75%
+Test Accuracy: 32%
+Uh-oh! The test accuracy is much lower than the training accuracy. This suggests the model might be overfitting—memorizing the training data instead of learning to generalize. 😬
+
+🛠 Insights & Fix-It Ideas 🧰
+Let’s turn this around:
+
+Tune k 🧮: Try different numbers of neighbors (k) to find the best fit!
+For that we have implimented another code that visually plots all the testing accuracies for k values till 10 from which we found out that k=9 is the best k value.
+Feature Engineering 🛠️: Add or remove features to sharpen the model’s skills.
+Cross-Validation 🌀: Use techniques like k-fold validation for a clearer performance picture.
+Experiment with Models 🧠: KNN is great, but maybe decision trees 🌳, logistic regression ➗, or even random forests 🌲 will work better here.
